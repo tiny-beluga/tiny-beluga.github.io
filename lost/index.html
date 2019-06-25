@@ -17,7 +17,11 @@
   <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="/css/aos.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/lost.css">
+  <script type="text/javascript">
+    $(window).resize(function(){resizeYoutube();});
+    $(function(){resizeYoutube();});
+    function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 480 / 854 ) + "px");} }); }
+  </script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
